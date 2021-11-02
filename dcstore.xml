@@ -1,8 +1,8 @@
 <modules xmlns:da="http://dotaddict.org/da/">
   <module id="metaProp">
-    <name>metaProp</name>
+    <name>Implements meta properties</name>
     <version>0.1</version>
-    <author>Franck Paul and contributors</author>
+    <author>Implements meta properties</author>
     <desc>Implements meta properties</desc>
     <file>https://github.com/franck-paul/metaProp/releases/download/0.1/plugin-metaProp-0.1.zip</file>
     <da:dcmin>2.17</da:dcmin>
