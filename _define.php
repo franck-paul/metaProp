@@ -15,20 +15,23 @@ if (!defined('DC_RC_PATH')) {
 }
 
 $this->registerModule(
-    'metaProp',                     // Name
-    'Implements meta properties',   // Description
-    'Franck Paul and contributors', // Author
-    '0.1',                          // Version
+    'metaProp',
+    'Implements meta properties',
+    'Franck Paul and contributors',
+    '0.1',
     [
-        'requires'    => [['core', '2.17']],
-        'permissions' => 'usage,contentadmin',                      // Permissions
-        'type'        => 'plugin',                                  // Type
-        'settings'    => [                                          // Settings
-            'self' => ''
+        'requires'    => [['core', '2.24']],
+        'permissions' => dcCore::app()->auth->makePermissions([
+            dcAuth::PERMISSION_USAGE,
+            dcAuth::PERMISSION_CONTENT_ADMIN,
+        ]),
+        'type'     => 'plugin',
+        'settings' => [
+            'self' => '',
         ],
 
-        'details'    => 'https://open-time.net/?q=metaProp',       // Details URL
-        'support'    => 'https://github.com/franck-paul/metaProp', // Support URL
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/metaProp/main/dcstore.xml'
+        'details'    => 'https://open-time.net/?q=metaProp',
+        'support'    => 'https://github.com/franck-paul/metaProp',
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/metaProp/main/dcstore.xml',
     ]
 );
