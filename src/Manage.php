@@ -61,7 +61,7 @@ class Manage extends Process
             return;
         }
 
-        Page::openModule(__('metaProp'));
+        Page::openModule(My::name());
 
         echo Page::breadcrumb(
             [
