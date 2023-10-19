@@ -15,6 +15,7 @@ declare(strict_types=1);
 namespace Dotclear\Plugin\metaProp;
 
 use dcCore;
+use Dotclear\App;
 use Dotclear\Core\Backend\Notices;
 use Dotclear\Core\Backend\Page;
 use Dotclear\Core\Process;
@@ -44,7 +45,7 @@ class Manage extends Process
             // ToDo
 
             Notices::addSuccessNotice(__('metaProp'));
-            dcCore::app()->admin->url->redirect('admin.plugin.' . My::id());
+            dcCore::app()->adminurl->redirect('admin.plugin.' . My::id());
         } catch (Exception $e) {
             dcCore::app()->error->add($e->getMessage());
         }
@@ -65,8 +66,8 @@ class Manage extends Process
 
         echo Page::breadcrumb(
             [
-                Html::escapeHTML(dcCore::app()->blog->name) => '',
-                __('metaProp')                              => '',
+                Html::escapeHTML(App::blog()->name()) => '',
+                __('metaProp')                        => '',
             ]
         );
         echo Notices::getNotices();
