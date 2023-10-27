@@ -45,8 +45,8 @@ class Manage extends Process
 
             Notices::addSuccessNotice(__('metaProp'));
             My::redirect();
-        } catch (Exception $e) {
-            App::error()->add($e->getMessage());
+        } catch (Exception $exception) {
+            App::error()->add($exception->getMessage());
         }
 
         return true;
