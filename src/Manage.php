@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @brief metaProp, a plugin for Dotclear 2
  *
@@ -17,12 +18,14 @@ namespace Dotclear\Plugin\metaProp;
 use Dotclear\App;
 use Dotclear\Core\Backend\Notices;
 use Dotclear\Core\Backend\Page;
-use Dotclear\Core\Process;
 use Dotclear\Helper\Html\Html;
+use Dotclear\Helper\Process\TraitProcess;
 use Exception;
 
-class Manage extends Process
+class Manage
 {
+    use TraitProcess;
+
     /**
      * Initializes the page.
      */
