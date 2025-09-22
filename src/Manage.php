@@ -16,8 +16,6 @@ declare(strict_types=1);
 namespace Dotclear\Plugin\metaProp;
 
 use Dotclear\App;
-use Dotclear\Core\Backend\Notices;
-use Dotclear\Core\Backend\Page;
 use Dotclear\Helper\Html\Html;
 use Dotclear\Helper\Process\TraitProcess;
 use Exception;
@@ -46,7 +44,7 @@ class Manage
         try {
             // ToDo
 
-            Notices::addSuccessNotice(__('metaProp'));
+            App::backend()->notices()->addSuccessNotice(__('metaProp'));
             My::redirect();
         } catch (Exception $exception) {
             App::error()->add($exception->getMessage());
@@ -64,18 +62,18 @@ class Manage
             return;
         }
 
-        Page::openModule(My::name());
+        App::backend()->page()->openModule(My::name());
 
-        echo Page::breadcrumb(
+        echo App::backend()->page()->breadcrumb(
             [
                 Html::escapeHTML(App::blog()->name()) => '',
                 __('metaProp')                        => '',
             ]
         );
-        echo Notices::getNotices();
+        echo App::backend()->notices()->getNotices();
 
         // Form
 
-        Page::closeModule();
+        App::backend()->page()->closeModule();
     }
 }
