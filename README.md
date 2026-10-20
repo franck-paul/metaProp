@@ -3,7 +3,7 @@
 [![Release](https://img.shields.io/github/v/release/franck-paul/metaProp)](https://github.com/franck-paul/metaProp/releases)
 [![Date](https://img.shields.io/github/release-date/franck-paul/metaProp)](https://github.com/franck-paul/metaProp/releases)
 [![Issues](https://img.shields.io/github/issues/franck-paul/metaProp)](https://github.com/franck-paul/metaProp/issues)
-[![License](https://img.shields.io/github/license/franck-paul/metaProp)](https://github.com/franck-paul/metaProp/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/franck-paul/metaProp)](https://github.com/franck-paul/metaProp/blob/main/LICENSE)
 
 Dotclear 2 plugin
 
