@@ -24,9 +24,7 @@ if (isset($this) && is_object($this) && method_exists($this, 'registerModule') &
             'requires'    => [['core', '2.39']],
             'permissions' => 'My',
             'type'        => 'plugin',
-            'settings'    => [
-                'self' => '',
-            ],
+            'settings'    => [],
 
             'details'    => 'https://open-time.net/?q=metaProp',
             'support'    => 'https://github.com/franck-paul/metaProp',
